@@ -24,13 +24,11 @@ class Vector {
         m_capacity_(n),
         arr_(n ? new T[n] : nullptr) {}  // конструктор с указанием параметров
   Vector(std::initializer_list<value_type> const
-             &items);  // конструктор списка инициализаторов (записываем в
-                       // фигурных скобках)
+             &items);  // конструктор списка инициализаторов
   Vector(const Vector &v);      // конструктор копирования
   Vector(Vector &&v);           // конструктор перемещения
   ~Vector() { delete[] arr_; }  // деструктор
-  Vector &operator=(const Vector &v);  // Перегрузка оператора присваивания для
-                                       // перемещаемого объекта
+  Vector &operator=(const Vector &v);  // Перегрузка оператора присваивания
 
   reference at(size_type i);  // доступ к указанному элементу с проверкой границ
   reference operator[](size_type pos);  // доступ к указанному элементу

@@ -7,8 +7,7 @@
 namespace s21 {
 template <class T, size_t S>
 class Array {
- public:  // просто переназначаем другие названия для шаблонов (до конца не
-          // разобрался)
+ public:
   using value_type = T;
   using reference = T &;
   using const_reference = const T &;
